@@ -4,9 +4,7 @@
     text-align: center;
     padding: 10px;
     margin:10px;
-    grid-area: auto / 2 / auto / 3;
-    place-self: center;
-
+    height: 600px;
 }
 
 .projectcard img {
@@ -16,22 +14,52 @@
 .container {
     position: relative;
     top: 100px;
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    animation-duration: 500ms;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
     
 .projectcard span {
     text-wrap: wrap;
 }
 
- @media screen and (max-width: 800px) {
+.linkbar {
+    position: relative;
+    height:100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.linkbar a {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    justify-content: center;
+    transition: 0.3s
+}
+
+.linkbar img {
+    height: inherit;
+    width: inherit;
+}
+
+.linkbar a:hover {
+    height: 70px;
+    width: 70px;
+}
+
+ /* @media screen and (max-width: 800px) {
     .container {
         position: relative;
         top: 100px;
         display: grid;
-        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
@@ -40,5 +68,5 @@
         width: 100%;
         min-width: 500px;
     
-    }
-} 
+    } */
+/* }  */

@@ -32,7 +32,7 @@ export default function Projects(title) {
         },
         {
             title: "project5",
-            description: "description1 dfd  mmmmmmmmmmmmmmmmmm",
+            description: "description1 dfd  mmmmmmmmmmmmmm  mmmm dfkjdkf dskfjkdsfj",
             image: "src\assets\react.svg",
             reference: "https://github.com/bwadley12/bwadley12.github.io"
         }
@@ -56,12 +56,18 @@ function ProjectCard(projectData) {
     return(
         <div className="projectcard">
             <div>
-            <img src="src\assets\react.svg"></img>
+            <img src="src\assets\github-color-svgrepo-com.svg"></img>
 
                 <h3>{projectData.project.title}</h3>
                 <span>{projectData.project.description}</span>
-                <br/>
-                <a href="https://github.com/bwadley12/bwadley12.github.io">Github</a>
+                <div className="linkbar">
+                    <a href="https://github.com/bwadley12/bwadley12.github.io">
+                        <img src="src\assets\github-color-svgrepo-com.svg"></img>
+                    </a>
+                    <a href="https://github.com/bwadley12/bwadley12.github.io">
+                        <img src="src\assets\github-color-svgrepo-com.svg"></img>
+                    </a>
+                </div>
             </div>
         </div>
     )
