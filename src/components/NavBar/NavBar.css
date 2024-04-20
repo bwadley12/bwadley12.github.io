@@ -28,3 +28,7 @@
     background-color: rgb(78, 88, 88);
     color: rgb(226, 226, 226);
 }
+
+.active {
+    text-decoration: underline;
+}

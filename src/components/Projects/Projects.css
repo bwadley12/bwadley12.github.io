@@ -1,0 +1,46 @@
+.projectcard {
+    display: inline-block;
+    height: 20%;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    width: 50%;
+    background-color: rgb(49, 54, 63);
+    text-align: left;
+    padding: 10px;
+    /* place-items: center;= */
+    margin:10px;
+}
+
+.projectcard img {
+    float:right;
+}
+
+.container {
+    position:relative;
+    top:100px;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 85%; */
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.projectcard span {
+    text-wrap: wrap;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav-right {
+      float: none;
+      display: block;
+    }
+    
+    .topnav-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }

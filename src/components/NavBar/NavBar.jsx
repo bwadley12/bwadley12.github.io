@@ -1,9 +1,11 @@
 import './NavBar.css'
 
 function NavEntry({title, location}) {
+    let active = window.location.href === window.location.origin + "/" + location;
+
     return (
         <div>
-            <a href={location} className="naventry">{title}</a>
+            <a href={location} className={`naventry ${active ? "active" : null}`}>{title}</a>
         </div>
     )
 }
