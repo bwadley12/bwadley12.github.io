@@ -6,7 +6,7 @@ export default function ThreeDPrinting() {
     return (
         <>
             <NavBar />
-            <h1>3D Printing Info...</h1>
+            <h1>3D Printing Info... Coming Soon</h1>
         </>
     )
 }
