@@ -1,46 +1,44 @@
 .projectcard {
-    display: inline-block;
-    height: 20%;
-    border-width: 2px;
-    border-color: black;
-    border-style: solid;
-    width: 50%;
+    width: 400px;
     background-color: rgb(49, 54, 63);
-    text-align: left;
+    text-align: center;
     padding: 10px;
-    /* place-items: center;= */
     margin:10px;
+    grid-area: auto / 2 / auto / 3;
+    place-self: center;
+
 }
 
 .projectcard img {
-    float:right;
+    width: 100%;
 }
 
 .container {
-    position:relative;
-    top:100px;
-    margin-left: auto;
-    margin-right: auto;
-    /* max-width: 85%; */
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    position: relative;
+    top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
-
+    
 .projectcard span {
     text-wrap: wrap;
 }
 
-@media screen and (max-width: 600px) {
-    .topnav a, .topnav-right {
-      float: none;
-      display: block;
+ @media screen and (max-width: 800px) {
+    .container {
+        position: relative;
+        top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 1fr;
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
     }
+
+    .projectcard {
+        width: 100%;
+        min-width: 500px;
     
-    .topnav-centered a {
-      position: relative;
-      top: 0;
-      left: 0;
-      transform: none;
     }
-  }
+} 

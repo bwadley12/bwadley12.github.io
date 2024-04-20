@@ -56,12 +56,13 @@ function ProjectCard(projectData) {
     return(
         <div className="projectcard">
             <div>
+            <img src="src\assets\react.svg"></img>
+
                 <h3>{projectData.project.title}</h3>
                 <span>{projectData.project.description}</span>
                 <br/>
                 <a href="https://github.com/bwadley12/bwadley12.github.io">Github</a>
             </div>
-            <img src="src\assets\react.svg" height={150}></img>
         </div>
     )
 
