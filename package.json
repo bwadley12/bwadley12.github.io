@@ -2,7 +2,7 @@
   "name": "bwadley12.github.io",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://bwadley12.github.io",
+  "homepage": "https://bwadley12.github.io/#/",
   "type": "module",
   "scripts": {
     "dev": "vite",

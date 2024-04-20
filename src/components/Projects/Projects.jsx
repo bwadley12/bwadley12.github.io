@@ -6,8 +6,8 @@ export default function Projects(title) {
 
     return (
         <>
-        <NavBar />
-        <h1>Projects Info...</h1>
+            <NavBar />
+            <h1>Projects Info...</h1>
         </>
     )
 }

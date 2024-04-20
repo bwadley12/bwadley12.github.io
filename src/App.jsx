@@ -9,8 +9,8 @@ export default function App() {
 
   return (
       <>
-      <NavBar />
-      <h1>Home Page!</h1>
+        <NavBar />
+        <h1>Home Page!</h1>
       </>
   )
 }

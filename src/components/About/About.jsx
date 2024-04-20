@@ -5,8 +5,8 @@ export default function About() {
 
     return (
         <>
-        <NavBar />
-        <h1>About Me..</h1>
+            <NavBar />
+            <h1>About Me..</h1>
         </>
     )
 }
