@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import {
-  createBrowserRouter,
-  RouterProvider,
+  createHashRouter,
+  RouterProvider
 } from "react-router-dom";
 import Projects from './components/Projects/Projects.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import ThreeDPrinting from './components/3DPrinting/ThreeDPrinting.jsx';
 import About from './components/About/About.jsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/projects",
     element: <Projects />,
