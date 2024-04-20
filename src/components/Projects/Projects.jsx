@@ -1,40 +1,98 @@
 import { useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
 import './Projects.css';
+import githubLogo from '../../assets/github.svg';
+import javaLogo from '../../assets/java.svg';
+import mavenLogo from '../../assets/maven-apache.jpg';
+import satelliteTile from '../../assets/satelliteTile.png';
+import landsatLogo from '../../assets/NASA_logo.png';
+import imageMagickLogo from '../../assets/image-magick.jpg';
+import jsLogo from '../../assets/JavaScript-logo.png';
+import reactLogo from '../../assets/react.svg';
+import viteLogo from '../../assets/vite.png';
+import controllerLogo from '../../assets/controller.svg';
+
 
 export default function Projects(title) {
     document.title = "Projects";
 
     const projects = [
         {
-            title: "Spring Boot Todo App",
-            description: "Spring and Spring Boot are tools I use every day",
-            image: "src\assets\react.svg",
-            reference: "https://github.com/bwadley12/bwadley12.github.io"
+            title: "Todo Tracker Server",
+            image: "https://spring.io/img/spring.svg",
+            isGame: false,
+            tools: [
+                {
+                    name: "Java",
+                    icon: javaLogo,
+                },
+                {
+                    name: "Maven",
+                    icon: mavenLogo
+                },
+                {
+                    name: "Spring Boot",
+                    icon: "https://spring.io/img/spring.svg"
+                }
+            ],
+            links: [
+                {
+                    name: "Github",
+                    ref: "https://github.com/bwadley12/TodoApp",
+                    icon: githubLogo
+                }
+            ]
         },
         {
-            title: "project2",
-            description: "description1",
-            image: "src\assets\react.svg",
-            reference: "https://github.com/bwadley12/bwadley12.github.io"
+            title: "Tile Server Data Generator",
+            image: satelliteTile,
+            isGame: true,
+            tools: [
+                {
+                    name: "Python",
+                    icon: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg"
+                },
+                {
+                    name: "Nasa Landsat",
+                    icon: landsatLogo
+                },
+                {
+                    name: "Image Magick",
+                    icon: imageMagickLogo
+                }
+            ],
+            links: [
+                {
+                    name: "Github",
+                    ref: "https://github.com/bwadley12/landsatgenerator",
+                    icon: githubLogo
+                }
+            ]
         },
         {
-            title: "project3",
-            description: "description1",
-            image: "src\assets\react.svg",
-            reference: "https://github.com/bwadley12/bwadley12.github.io"
-        },
-        {
-            title: "project4",
-            description: "description1",
-            image: "src\assets\react.svg",
-            reference: "https://github.com/bwadley12/bwadley12.github.io"
-        },
-        {
-            title: "project5",
-            description: "description1 dfd  mmmmmmmmmmmmmm  mmmm dfkjdkf dskfjkdsfj",
-            image: "src\assets\react.svg",
-            reference: "https://github.com/bwadley12/bwadley12.github.io"
+            title: "Portfolio Site",
+            image: reactLogo,
+            tools: [
+                {
+                    name: "JavaScript",
+                    icon: jsLogo
+                },
+                {
+                    name: "React",
+                    icon: reactLogo
+                },
+                {
+                    name: "Vite",
+                    icon: viteLogo
+                }
+            ],
+            links: [
+                {
+                    name: "Github",
+                    ref: "https://github.com/bwadley12/bwadley12.github.io",
+                    icon: githubLogo
+                }
+            ]
         }
     ]
     
@@ -51,23 +109,35 @@ export default function Projects(title) {
 }
 
 function ProjectCard(projectData) {
-    console.log(projectData)
+    // let links = projectData.project.links.map(linkInfo => 
+    //     <a key={linkInfo.ref} href={linkInfo.ref} title={linkInfo.name}>
+    //         <img src={linkInfo.icon}></img>
+    //     </a>
+    // );
+
+    let tools = projectData.project.tools.map(linkInfo => 
+        <a key={linkInfo.name}>
+            <img src={linkInfo.icon} title={linkInfo.name}></img>
+        </a>
+    );
 
     return(
         <div className="projectcard">
-            <div>
-            <img src="src\assets\github-color-svgrepo-com.svg"></img>
-
-                <h3>{projectData.project.title}</h3>
-                <span>{projectData.project.description}</span>
-                <div className="linkbar">
-                    <a href="https://github.com/bwadley12/bwadley12.github.io">
-                        <img src="src\assets\github-color-svgrepo-com.svg"></img>
-                    </a>
-                    <a href="https://github.com/bwadley12/bwadley12.github.io">
-                        <img src="src\assets\github-color-svgrepo-com.svg"></img>
-                    </a>
-                </div>
+            <div style={{position:"relative"}}>
+                <a className="githubRef" href="https://github.com/bwadley12/bwadley12.github.io">
+                    <img src={githubLogo}></img>
+                </a>
+                {projectData.project.isGame  && 
+                <a className="gameRef" href="#/snake">
+                    <img src={controllerLogo}></img>
+                </a>
+            }
+            </div>
+            
+            <img src={projectData.project.image}></img>
+            <h3>{projectData.project.title}</h3>
+            <div className="toolbar">
+                {tools}
             </div>
         </div>
     )

@@ -10,6 +10,7 @@ import Projects from './components/Projects/Projects.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
 import ThreeDPrinting from './components/3DPrinting/ThreeDPrinting.jsx';
 import About from './components/About/About.jsx'
+import Snake from './components/Snake/Snake.jsx'
 
 const router = createHashRouter([
   {
@@ -30,6 +31,11 @@ const router = createHashRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />
+  },
+  {
+    path:"/snake",
+    element: <Snake />,
     errorElement: <ErrorPage />
   }
 ]);
