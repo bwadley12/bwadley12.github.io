@@ -11,6 +11,11 @@
     align-items: center;
     background-color: rgb(34, 40, 49);
     z-index: 999;
+    height: 80px;
+}
+
+.navbar > div {
+
 }
 
 .naventry {
@@ -20,14 +25,23 @@
     padding: .5em 1.5em .5em 1.5em;
     color: rgb(238,238,238);
     display: flex;
-    justify-content: inherit;
-    text-align: inherit;
-    align-items: inherit;
+    /* justify-content: inherit; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+}
+
+.naventry > img {
+    height: inherit;
+    /* width: inherit; */
 }
 
 .naventry:hover {
-    background-color: rgb(78, 88, 88);
-    color: rgb(226, 226, 226);
+    /* background-color: rgb(78, 88, 88); */
+    /* color: rgb(226, 226, 226); */
+    height: 40px;
 }
 
 .active {

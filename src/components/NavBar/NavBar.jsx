@@ -1,11 +1,15 @@
-import './NavBar.css'
+import './NavBar.css';
+import homeLogo from '../../assets/home.svg';
+
 
 function NavEntry({title, location}) {
     let active = window.location.href === window.location.origin + "/" + location;
 
     return (
         <div>
-            <a href={location} className={`naventry ${active ? "active" : null}`}>{title}</a>
+            <a href={location} className={`naventry ${active ? "active" : null}`}>
+                <img src={homeLogo}></img>
+            </a>
         </div>
     )
 }
