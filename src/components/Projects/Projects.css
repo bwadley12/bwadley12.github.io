@@ -15,7 +15,7 @@
 
 .container {
     position: relative;
-    top: 100px;
+    top: 120px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -68,9 +68,9 @@
 }
 
 .githubRef, .gameRef {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
     transition: 0.3s;
 }
 
@@ -93,8 +93,22 @@
 }
 
 .githubRef:hover, .gameRef:hover {
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
+}
+
+.naventry:hover + .hidden {
+    display: block;
+    top: 0px;
+    color: "#ffffff";
+}
+
+.hidden {
+    position: relative;
+    top:-20px;
+    color: "#000000";
+    display: none;
+    pointer-events: none;
 }
 
 
@@ -108,10 +122,4 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
-
-    .projectcard {
-        width: 100%;
-        min-width: 500px;
-    
-    } */
-/* }  */
+}  */

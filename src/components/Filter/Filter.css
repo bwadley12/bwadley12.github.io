@@ -1,0 +1,9 @@
+.searchContainer {
+    position: fixed;
+    top: 90px;
+    height: 40px;
+}
+
+.searchBar {
+    position: relative;
+}

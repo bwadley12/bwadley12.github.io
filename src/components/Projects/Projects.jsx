@@ -11,6 +11,7 @@ import jsLogo from '../../assets/JavaScript-logo.png';
 import reactLogo from '../../assets/react.svg';
 import viteLogo from '../../assets/vite.png';
 import controllerLogo from '../../assets/controller.svg';
+import Filter from '../Filter/Filter'
 
 
 export default function Projects(title) {
@@ -103,6 +104,7 @@ export default function Projects(title) {
     return (
         <div className="container">
             <NavBar />
+            <Filter />
             {projectCards}
         </div>
     )

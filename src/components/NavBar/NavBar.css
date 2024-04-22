@@ -14,10 +14,6 @@
     height: 80px;
 }
 
-.navbar > div {
-
-}
-
 .naventry {
     max-width: fit-content;
     margin-left: auto;
@@ -25,25 +21,27 @@
     padding: .5em 1.5em .5em 1.5em;
     color: rgb(238,238,238);
     display: flex;
-    /* justify-content: inherit; */
     text-align: center;
     align-items: center;
     justify-content: center;
     height: 30px;
     width: 100px;
+    transition: 0.3s;
 }
 
 .naventry > img {
     height: inherit;
-    /* width: inherit; */
+    color: rgb(44, 72, 72);
 }
 
 .naventry:hover {
-    /* background-color: rgb(78, 88, 88); */
-    /* color: rgb(226, 226, 226); */
     height: 40px;
 }
 
 .active {
-    text-decoration: underline;
+    filter: invert(57%) sepia(9%) saturate(2298%) hue-rotate(130deg) brightness(93%) contrast(98%);
+}
+
+.navbar {
+    font-size:medium;
 }
