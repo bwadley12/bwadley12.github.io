@@ -1,9 +1,15 @@
 .searchContainer {
-    position: fixed;
-    top: 90px;
+    position: sticky;
+    top: 100px;
     height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    z-index: 999;
 }
 
 .searchBar {
-    position: relative;
+    /* position: relative; */
 }

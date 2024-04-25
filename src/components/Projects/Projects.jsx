@@ -14,7 +14,7 @@ import controllerLogo from '../../assets/controller.svg';
 import Filter from '../Filter/Filter'
 
 
-export default function Projects(title) {
+export default function Projects() {
     document.title = "Projects";
 
     const projects = [
@@ -102,11 +102,14 @@ export default function Projects(title) {
     );
 
     return (
+        <>
+        <NavBar />
+        <Filter />
+
         <div className="container">
-            <NavBar />
-            <Filter />
             {projectCards}
         </div>
+        </>
     )
 }
 

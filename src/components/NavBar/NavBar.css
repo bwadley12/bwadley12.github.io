@@ -1,17 +1,39 @@
-.navbar {
-    font-size: 1.5em;
+.navcontainer {
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
+    position:sticky;
+    top:0;
+    z-index: 999;
+    background-color: rgb(34, 40, 49);
+    padding-bottom: 5px;
+}
+
+
+.navbar {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5em;
+    width: fit-content;
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-color: rgb(34, 40, 49);
-    z-index: 999;
     height: 80px;
+}
+
+@media screen and (min-width: 451px) and (max-width: 1080px) {
+    .navbar {
+        padding-bottom: 5px;
+        border-bottom: 1px white solid;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .navbar {
+        padding-bottom: 0px;
+        border-bottom: 1px white solid;
+    }
 }
 
 .naventry {
@@ -25,7 +47,6 @@
     align-items: center;
     justify-content: center;
     height: 30px;
-    width: 100px;
     transition: 0.3s;
 }
 
@@ -34,8 +55,16 @@
     color: rgb(44, 72, 72);
 }
 
-.naventry:hover {
-    height: 40px;
+@media (hover:hover) {
+    .naventry:hover {
+        height: 40px;
+    }
+
+    .naventry:hover > .hidden {
+        display:block;
+        top: 60px;
+        color: "#ffffff";
+    }
 }
 
 .active {
@@ -44,4 +73,11 @@
 
 .navbar {
     font-size:medium;
+}
+
+.hidden {
+    position: absolute;
+    color: "#000000";
+    display: none;
+    pointer-events: none;
 }
