@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import './Projects.css';
 import githubLogo from '../../assets/github.svg';
