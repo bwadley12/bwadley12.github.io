@@ -1,16 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import Home from './routes/Home/Home.jsx'
 import './index.css'
 import {
   createHashRouter,
   RouterProvider
 } from "react-router-dom";
-import Projects from './components/Projects/Projects.jsx';
-import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
-import ThreeDPrinting from './components/3DPrinting/ThreeDPrinting.jsx';
-import About from './components/About/About.jsx'
-import Snake from './components/Snake/Snake.jsx'
+import Projects from './routes/Projects/Projects.jsx';
+import ErrorPage from './routes/ErrorPage/ErrorPage.jsx';
+import About from './routes/About/About.jsx'
+import ThreeDPrinting from './routes/ThreeDPrinting/ThreeDPrinting.jsx'
 
 const router = createHashRouter([
   {
@@ -24,18 +23,18 @@ const router = createHashRouter([
     errorElement: <ErrorPage />
   },
   {
-    path: "/threedprinting",
+    path: "/3dprinting",
     element: <ThreeDPrinting />,
-    errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />
   },
   {
     path: "/",
-    element: <App />,
+    element: <Home />,
     errorElement: <ErrorPage />
   },
   {
     path:"/snake",
-    element: <Snake />,
+    element: <ErrorPage />,
     errorElement: <ErrorPage />
   }
 ]);

@@ -8,22 +8,12 @@
     overflow: auto;
 }
 
-.projectcard {
-    width: 400px;
-    background-color: rgb(49, 54, 63);
-    text-align: center;
-    padding: 10px;
-    margin:10px;
-    height: 600px;
-    border-radius: 10px;
-}
-
-.projectcard > img {
+.standard-card > img {
     width: 100%;
     height: 400px;
 }
     
-.projectcard > span {
+.standard-card > span {
     text-wrap: wrap;
     height: 4em;
     display: block;
@@ -54,7 +44,7 @@
 }
 
 .githubRef {
-    position:absolute;
+    position: absolute;
     top:0;
     right:0;    
 }
@@ -85,25 +75,7 @@
     width: inherit;
 }
 
-.linkbar a:hover, .toolbar a:hover {
-    height: 80px;
-    width: 80px;
-}
-
 .githubRef:hover, .gameRef:hover {
     height: 50px;
     width: 50px;
 }
-
-
-
- /* @media screen and (max-width: 800px) {
-    .container {
-        position: relative;
-        top: 100px;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-    }
-}  */

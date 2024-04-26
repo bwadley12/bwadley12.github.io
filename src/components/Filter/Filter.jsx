@@ -1,6 +1,5 @@
 import './Filter.css';
-import './FilterItem.css'
-// import FilterItem from './FilterItem';
+import FilterItem from './FilterItem';
 
 export default function Filter() {
     return (
@@ -9,18 +8,4 @@ export default function Filter() {
             <FilterItem filterValue="javascript" />
         </div>
     )
-
-}
-
-
-
-function FilterItem({filterValue}) {
-
-    return (
-        <div className="filteritem">
-            {console.log(filterValue)} 
-            <span>{filterValue} </span>
-        </div>
-    )
-
 }

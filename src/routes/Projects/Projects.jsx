@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../../components/NavBar/NavBar";
 import './Projects.css';
 import githubLogo from '../../assets/github.svg';
 import javaLogo from '../../assets/java.svg';
@@ -11,7 +11,7 @@ import jsLogo from '../../assets/JavaScript-logo.png';
 import reactLogo from '../../assets/react.svg';
 import viteLogo from '../../assets/vite.png';
 import controllerLogo from '../../assets/controller.svg';
-import Filter from '../Filter/Filter'
+import Filter from '../../components/Filter/Filter'
 
 
 export default function Projects() {
@@ -104,9 +104,9 @@ export default function Projects() {
     return (
         <>
         <NavBar />
-        <Filter />
+        {/* <Filter /> */}
 
-        <div className="container">
+        <div className="standard-container">
             {projectCards}
         </div>
         </>
@@ -114,11 +114,6 @@ export default function Projects() {
 }
 
 function ProjectCard(projectData) {
-    // let links = projectData.project.links.map(linkInfo => 
-    //     <a key={linkInfo.ref} href={linkInfo.ref} title={linkInfo.name}>
-    //         <img src={linkInfo.icon}></img>
-    //     </a>
-    // );
 
     let tools = projectData.project.tools.map(linkInfo => 
         <a key={linkInfo.name}>
@@ -127,16 +122,17 @@ function ProjectCard(projectData) {
     );
 
     return(
-        <div className="projectcard">
+        <div className="standard-card">
             <div style={{position:"relative"}}>
                 <a className="githubRef" href="https://github.com/bwadley12/bwadley12.github.io">
                     <img src={githubLogo}></img>
                 </a>
-                {projectData.project.isGame  && 
-                <a className="gameRef" href="#/snake">
-                    <img src={controllerLogo}></img>
-                </a>
-            }
+                {
+                    projectData.project.isGame  && 
+                    <a className="gameRef" href="#/snake">
+                        <img src={controllerLogo}></img>
+                    </a>
+                }
             </div>
             
             <img src={projectData.project.image}></img>

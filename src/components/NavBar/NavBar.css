@@ -3,10 +3,10 @@
     position:sticky;
     top:0;
     z-index: 999;
-    background-color: rgb(34, 40, 49);
+    background-color: rgb(44, 48, 54);
     padding-bottom: 5px;
+    padding-top: 5px;
 }
-
 
 .navbar {
     margin-left: auto;
@@ -24,7 +24,6 @@
 
 @media screen and (min-width: 451px) and (max-width: 1080px) {
     .navbar {
-        padding-bottom: 5px;
         border-bottom: 1px white solid;
     }
 }
@@ -32,6 +31,7 @@
 @media screen and (max-width: 450px) {
     .navbar {
         padding-bottom: 0px;
+        padding-top: 0px;
         border-bottom: 1px white solid;
     }
 }
