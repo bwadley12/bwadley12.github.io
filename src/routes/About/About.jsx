@@ -1,4 +1,6 @@
 import NavBar from "../../components/NavBar/NavBar";
+import "./About.css";
+import Carousel from "../../components/Carousel/Carousel";
 
 export default function About() {
     document.title = "About";
@@ -7,7 +9,13 @@ export default function About() {
         <>
             <NavBar />
             <div className="standard-container"> 
-                <div className="standard-card">
+                <Carousel />
+
+                <div className="wide-card">
+
+                </div>
+
+                {/* <div className="standard-card">
 
                 </div>
                 <div className="standard-card">
@@ -24,7 +32,7 @@ export default function About() {
                 </div>
                 <div className="standard-card">
                     
-                </div>
+                </div> */}
             </div>
         </>
     )
