@@ -22,17 +22,20 @@
     height: 80px;
 }
 
-@media screen and (min-width: 451px) and (max-width: 1080px) {
+/* @media screen and (min-width: 451px) and (max-width: 1080px) {
     .navbar {
         border-bottom: 1px white solid;
     }
-}
+} */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 428px) {
+    .navcontainer {
+        height: 30px;
+        /* border-bottom: 1px white solid; */
+    }
+
     .navbar {
-        padding-bottom: 0px;
-        padding-top: 0px;
-        border-bottom: 1px white solid;
+        height: 30px;
     }
 }
 
