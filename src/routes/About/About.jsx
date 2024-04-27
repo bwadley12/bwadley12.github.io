@@ -1,6 +1,7 @@
 import NavBar from "../../components/NavBar/NavBar";
 import "./About.css";
-import Carousel from "../../components/Carousel/Carousel";
+import aboutMePic from "../../assets/react.svg";
+// import Carousel from "../../components/Carousel/Carousel";
 
 export default function About() {
     document.title = "About";
@@ -9,30 +10,13 @@ export default function About() {
         <>
             <NavBar />
             <div className="standard-container"> 
-                <Carousel />
-
                 <div className="wide-card">
-
+                    info about me
                 </div>
-
-                {/* <div className="standard-card">
-
-                </div>
-                <div className="standard-card">
-                    
-                </div>
-                <div className="standard-card">
-                    
-                </div>
-                <div className="standard-card">
-
-                </div>
-                <div className="standard-card">
-                    
-                </div>
-                <div className="standard-card">
-                    
-                </div> */}
+                
+                <img className="bubble-img" src={aboutMePic}></img>
+                <img className="bubble-img" src={aboutMePic}></img>
+                <img className="bubble-img" src={aboutMePic}></img>
             </div>
         </>
     )
