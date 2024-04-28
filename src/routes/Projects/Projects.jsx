@@ -26,6 +26,17 @@ export default function Projects() {
             date: "2023",
             image: "https://spring.io/img/spring.svg",
             isGame: false,
+            description: "As part of a pre-interview challenge, I was tasked with creating a "+
+                         "microservice-style todo app using Spring and Spring Boot. RESTful API's " +
+                         "for all CRUD functionalities were required.\n\n" +
+                         "Additional requirements included:\n" +
+                         "- A to-do item should contain a title and description.\n" +
+                         "- Include an API to retrieve a list of all to-do items.\n" +
+                         "- Use an in-memory database (such as H2) for data persistence\n" +
+                         "- The implementation should also include proper error handling and validation for inputs.\n\n" +
+                         "I decided to take this project a step further and include a UI for easy interfacing. " +
+                         "This project is available to download and use as anyone pleases!"
+                         ,
             tools: [
                 {
                     name: "Java",
@@ -159,29 +170,25 @@ class ProjectCard extends React.Component {
             expanded: true
         };
 
+        this.tools = props.project.tools.map(linkInfo => 
+            <a key={linkInfo.name}>
+                <img src={linkInfo.icon} title={linkInfo.name}></img>
+            </a>
+        );
+
         this.handleClick = this.handleClick.bind(this);
         this.extraInfo = React.createRef();
     }
 
     
     handleClick() {
-        this.setState({expanded: !this.state.expanded});
-        // const node = ReactDOM.findDOMNode(this);
-
-
-        if(this.state.expanded) {
-            console.log("expand");
-        } else {
-            console.log("collapse");
-        }
-        console.log(this.extraInfo)
         this.extraInfo.current.classList.toggle("expanded");
     }
 
     render() {
         return(
-            <div className="project-card" onClick={this.handleClick}>
-                <img src={this.props.project.image}></img>
+            <div className="project-card">
+                <img src={this.props.project.image} onClick={this.handleClick}></img>
                 <div className="info-container">
                     <div>
                         {this.props.project.title}
@@ -192,18 +199,12 @@ class ProjectCard extends React.Component {
                 </div>
 
                 <div className="extra-info" ref={this.extraInfo}>
-                        <div>informatiooon</div>
-                        <div>informatiooon</div>
-                        <div>informatiooon</div>
-                        <div>informatiooon</div>
-                        <div>informatiooon</div>
-                        <div>informatiooon</div>
-                        
-
+                    <span>{this.props.project.description}</span>
+                    <div className="toolbar">
+                        {this.tools}
                     </div>
-
-       
-        </div>
+                </div>
+            </div>
         )
     }
 }
@@ -212,11 +213,7 @@ class ProjectCard extends React.Component {
 
 
 
-   // let tools = projectData.project.tools.map(linkInfo => 
-    //     <a key={linkInfo.name}>
-    //         <img src={linkInfo.icon} title={linkInfo.name}></img>
-    //     </a>
-    // );
+
 
 
      {/* <a className="githubRef" href="https://github.com/bwadley12/bwadley12.github.io">
