@@ -208,32 +208,3 @@ class ProjectCard extends React.Component {
         )
     }
 }
-
-// const [expanded, isExpanded] = useState(false);
-
-
-
-
-
-
-     {/* <a className="githubRef" href="https://github.com/bwadley12/bwadley12.github.io">
-                <img src={githubLogo}></img>
-            </a> */}
-            
-            {/* <div style={{position:"relative"}}>
-                <a className="githubRef" href="https://github.com/bwadley12/bwadley12.github.io">
-                    <img src={githubLogo}></img>
-                </a>
-                {
-                    projectData.project.isGame  && 
-                    <a className="gameRef" href="#/snake">
-                        <img src={controllerLogo}></img>
-                    </a>
-                }
-            </div>
-            
-            
-            <h3>{projectData.project.title}</h3>
-            <div className="toolbar">
-                {tools}
-            </div> */}

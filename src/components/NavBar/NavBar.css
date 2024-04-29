@@ -30,12 +30,12 @@
 
 @media screen and (max-width: 428px) {
     .navcontainer {
-        height: 30px;
+        height: 35px;
         /* border-bottom: 1px white solid; */
     }
 
     .navbar {
-        height: 30px;
+        height: 35px;
     }
 }
 

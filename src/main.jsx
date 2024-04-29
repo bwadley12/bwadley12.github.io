@@ -10,6 +10,7 @@ import Projects from './routes/Projects/Projects.jsx';
 import ErrorPage from './routes/ErrorPage/ErrorPage.jsx';
 import About from './routes/About/About.jsx'
 import ThreeDPrinting from './routes/ThreeDPrinting/ThreeDPrinting.jsx'
+import PlantAccesories from './routes/ThreeDPrinting/PlantAccessories/PlantAccessories.jsx';
 
 const router = createHashRouter([
   {
@@ -33,8 +34,8 @@ const router = createHashRouter([
     errorElement: <ErrorPage />
   },
   {
-    path:"/snake",
-    element: <ErrorPage />,
+    path:"/3dprinting/Plant-Accessories",
+    element: <PlantAccesories />,
     errorElement: <ErrorPage />
   }
 ]);
