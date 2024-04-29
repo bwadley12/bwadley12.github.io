@@ -1,3 +1,7 @@
+body {
+    background-color: #f7f7f7;
+}
+
 .three-d-print-category-card {
     flex: 2 0 45%;
     min-width: 400px;
@@ -7,6 +11,13 @@
     /* border: 1px white solid; */
     height: fit-content;
     aspect-ratio: 1.5;
+}
+
+@media screen and (max-width: 450px) {
+    .three-d-print-category-card {
+      margin-left: 0;
+      margin-right: 0;
+    }
 }
 
 .shadow {
@@ -57,9 +68,11 @@
     transform: translateY(-50%);
 }
 
-.three-d-print-category-card:hover > .pointer-box {
-    visibility: visible;
-    width:10%
+@media (hover:hover) {
+    .three-d-print-category-card:hover > .pointer-box {
+        visibility: visible;
+        width:10%
+    }
 }
 
 .three-d-print-category-card > .title {
