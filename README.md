@@ -1,11 +1,8 @@
-Personal site and portfolio page for Bradley Willimack.
+Website for Priceless Prints Colorado.
 Built using Vite + React.
 
-To deploy to github, run:
-```
-git checkout gh-pages
-npm run deploy
-``` 
+Will auto-deploy to github with commits to remote main.
+Deploys using Netlify runner.
 
 While in development, run:
 '''
